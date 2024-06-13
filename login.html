@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Log In</h1>
+
+        <p>Let's Get Started With Your Free Trials</p>
+
+        <input type="email" placeholder="Enter Email" required id="userEmailLogin">
+
+        <br><br>
+
+        <input type="password" placeholder="Enter Password" required id="userPassLogin">
+
+        <br><br>
+
+        <button id="btnn">Log In</button>
+
+        <br>
+        <br>
+
+        <span>Create an account? <a href="index.html">Create account</a></span>
+
+    </div>
+
+
+    <script>
+
+        let passlogin = document.getElementById('userPassLogin');
+
+        let emaillogin = document.getElementById('userEmailLogin');
+
+
+        
+        let btnn = document.getElementById('btnn');
+
+        let passwordGet = localStorage.getItem('userPass');
+
+        let emailGet = localStorage.getItem('userEmail')
+
+let loginGet = localStorage.getItem('login');
+
+        btnn.addEventListener('click', function(){
+
+            if( emaillogin.value === emailGet && passlogin.value === passwordGet){
+
+                alert('you login');
+
+//                 if( loginGet == true){
+
+ window.location.href='dashboard.html'
+
+ window.history.forward()
+
+//                 }else{
+
+                    // window.location.href='index.html'
+//                 }
+
+               
+
+            }else{
+
+                alert('Inccorect Data')
+            }
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

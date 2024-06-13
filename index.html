@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Sign Up</h1>
+
+        <p>Let's Get Started With Your Free Trials</p>
+
+        <input type="text" placeholder="Enter Name" required id="name">
+
+        <br><br>
+
+        <input type="email" placeholder="Enter Email" required id="email">
+
+        <br><br>
+
+        
+        <input type="password" placeholder="Create Password" required id="password" > 
+
+        <br><br>
+
+        <button id="btn">Sign Up</button>
+
+        <br>
+        <br>
+
+        <span>Already have an account? <a href="login.html">login In</a></span>
+
+        <p class="com">By Signung up to create an account I accept Company's <br> <a target="_blank"
+                href="https://policies.google.com/terms?hl=en-US"> Terms Of Use and Privacy Policy.</a> </p>
+
+    </div>
+
+
+    <script>
+
+
+        btn.addEventListener('click', function () {
+
+
+            let name = document.getElementById('name').value;
+
+            let email = document.getElementById('email').value;
+
+            let password = document.getElementById('password').value;
+
+            let btn = document.getElementById('btn');
+
+
+
+            if (name === "" || email === "" || password === "") {
+
+                alert('Please Enter Data')
+
+                window.history.location.href='index.html'
+
+            }else{
+
+
+                localStorage.setItem('userName', name);
+
+
+localStorage.setItem('userEmail', email);
+
+
+
+localStorage.setItem('userPass', password);
+
+localStorage.setItem('login' , true);
+
+
+window.location.href='login.html' ;
+
+window.history.forward()
+
+// alert('Account Succefully Created');
+
+            }
+
+
+
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>
